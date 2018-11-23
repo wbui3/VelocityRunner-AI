@@ -10,10 +10,5 @@ class Spaceship {
     rectMode(CENTER);
     rect(x,y,w,h); //<>//
   }
-  
-  // This function adds walls into the walls array
-  void addWall() {
-    Wall_Obstacle obs = new Wall_Obstacle();
-    walls.add(obs);
-  }
+  // Note: addWall() function has been moved to the "Velocity_Runner" file. Makes no sense to put that function in the "Spaceship" file :/
 }
