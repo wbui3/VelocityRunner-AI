@@ -1,7 +1,13 @@
 Spaceship ship;
 
 // The array below will carry information about which walls are going to spawn.
-ArrayList<Wall_Obstacle> walls = new ArrayList<Wall_Obstacle>();
+ArrayList<Wall_Obstacle> wallArray = new ArrayList<Wall_Obstacle>();
+
+// This function adds walls into the walls array
+  void addWall() {
+    Wall_Obstacle obs = new Wall_Obstacle();
+    wallArray.add(obs);
+  }
 
 void setup() {
   // Sets up the size of the game.
@@ -9,7 +15,7 @@ void setup() {
   // Creating a class instance for the file to use.
   ship = new Spaceship();
   // Add a wall in the beginning of the game. 
-  ship.addWall();
+  addWall();
 }
 
 void draw() {
@@ -19,12 +25,12 @@ void draw() {
   
   // This if statement controls how often the walls will spawn.
   if(frameCount % 35 == 0){
-    ship.addWall();
+    addWall();
   }
     
   // Generate walls the player will dodge
-  for(int i = 0; i < walls.size(); i++){
-    walls.get(i).obstacle(i+60);
+  for(int i = 0; i < wallArray.size(); i++){
+    wallArray.get(i).obstacle(i+60);
     }
 }
 
