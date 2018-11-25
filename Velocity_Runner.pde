@@ -32,6 +32,7 @@ void draw() {
   for(int i = 0; i < wallArray.size(); i++){
     wallArray.get(i).obstacle(i+60);
     }
+  // Calling the AI function
   ship.dodgingAI();
 }
 
