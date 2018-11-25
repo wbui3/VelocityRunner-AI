@@ -11,4 +11,19 @@ class Spaceship {
     rect(x,y,w,h); //<>//
   }
   // Note: addWall() function has been moved to the "Velocity_Runner" file. Makes no sense to put that function in the "Spaceship" file :/
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  // This is the function for a heuristic AI. 
+  void dodgingAI(){
+    for (int i = 0; i < wallArray.size(); i++){    
+      
+      // if (obstacle is less than X distance away && obstacle will collide with the ship...)
+      if ((ship.y - wallArray.get(i).posY < 100) && wallArray.get(i).posX == 225 && ship.x > 75){   // this is for moving the ship to the left
+        ship.x -= 150;
+      }
+      if ((ship.y - wallArray.get(i).posY < 100) && wallArray.get(i).posX == 75 && ship.x < 225){  // this is for moving the ship to the right 
+        ship.x += 150;
+      }
+    }
+  }
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
