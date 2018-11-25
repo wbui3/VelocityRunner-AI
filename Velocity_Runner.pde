@@ -32,6 +32,7 @@ void draw() {
   for(int i = 0; i < wallArray.size(); i++){
     wallArray.get(i).obstacle(i+60);
     }
+  ship.dodgingAI();
 }
 
 // Controls the movement of the ship
