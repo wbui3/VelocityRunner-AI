@@ -1,4 +1,6 @@
 Spaceship ship;
+PImage phantom; 
+PImage explosion;
 
 // The array below will carry information about which walls are going to spawn.
 ArrayList<Wall_Obstacle> wallArray = new ArrayList<Wall_Obstacle>();
@@ -16,6 +18,9 @@ void setup() {
   ship = new Spaceship();
   // Add a wall in the beginning of the game. 
   addWall();
+  
+  phantom = loadImage("phantom000.png");           // loads the spaceship image, but doesn't SHOW it
+  explosion = loadImage("fireFlare000.png");       // loads the explosion image, but doesn't SHOW it
 }
 
 void draw() {
