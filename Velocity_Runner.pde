@@ -23,6 +23,17 @@ void draw() {
   // Create the ship the player will control.
   ship.show();
   
+   // For-loop calls a function that will increment the score
+   // ISSUES: Score increases at an alarming pace, rather than 1 point per obstacle. Warrants investigation
+   for(int i = 0; i < wallArray.size(); i++){        
+    if (wallArray.get(i).posY > 700){                
+      ship.scoreTracker(i);
+    }
+  }
+  // Displays the score
+  textSize(15);
+  text("current Score: " + ship.score, 10, 15);
+  
   // This if statement controls how often the walls will spawn.
   if(frameCount % 35 == 0){
     addWall();
