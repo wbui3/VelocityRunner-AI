@@ -48,7 +48,18 @@ void draw() {
   // Generate walls the player will dodge
   for(int i = 0; i < wallArray.size(); i++){
     wallArray.get(i).obstacle(i+60);
-    }
+    
+    int shipX = ship.x;
+    int shipY = ship.y;
+    float wallX = wall_array.get(i).posX;
+    float wallY = wall_array.get(i).posY;
+    
+    // This if statement will check to see if the ship has collided with a wall.
+    if(wall_array.get(i).collide(shipX, shipY, wallX, wallY)){
+      println("HIT");
+    } 
+    
+  }
   // Calling the AI function
   ship.dodgingAI();
 }
