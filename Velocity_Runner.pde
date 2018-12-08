@@ -51,11 +51,11 @@ void draw() {
     
     int shipX = ship.x;
     int shipY = ship.y;
-    float wallX = wall_array.get(i).posX;
-    float wallY = wall_array.get(i).posY;
+    float wallX = wallArray.get(i).posX;
+    float wallY = wallArray.get(i).posY;
     
     // This if statement will check to see if the ship has collided with a wall.
-    if(wall_array.get(i).collide(shipX, shipY, wallX, wallY)){
+    if(wallArray.get(i).collide(shipX, shipY, wallX, wallY)){
       println("HIT");
     } 
     
