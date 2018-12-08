@@ -63,6 +63,7 @@ class Wall_Obstacle {
     } //<>//
   }
   
+  /*
   // This fuction will create a field opposite to the wall where if the player passes through here, the player will score point(s).
   // ISSUE: The score increments 2 instead for some reason. Also it's inconsistent at high speeds.
   boolean score(int spaceX, int spaceY, float wallX, float wallY, int rnum) {
@@ -100,5 +101,6 @@ class Wall_Obstacle {
       }
     }
   }
+  */
   
 }
