@@ -56,12 +56,14 @@ void draw() {
 
     // This if statement will check to see if the ship has collided with a wall.
     if(wallArray.get(i).collide(shipX, shipY, wallX, wallY)){
+      noLoop();
+      ship.mutate();
       println("HIT");
     }
 
   }
   // Calling the AI function
-  ship.dodgingAI();
+  //ship.dodgingAI();
 }
 
 // Controls for the Human player to use
@@ -80,5 +82,9 @@ void keyPressed() {
   }
    if (key == 'u'){          // Pressing the 'u' button will UNpause the game
     loop();
+  }
+  if (key == 'm'){          // Press 'm' to self-destruct
+    noLoop();
+    ship.mutate();
   }
 }
