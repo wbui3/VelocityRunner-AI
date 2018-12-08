@@ -45,6 +45,7 @@ void draw() {
   // This if statement controls how often the walls will spawn.
   if(frameCount % 35 == 0){
     addWall();
+    ship.scoreTracker();
   }
 
   // Generate walls the player will dodge
