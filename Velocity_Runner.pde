@@ -65,9 +65,11 @@ void draw() {
       println("HIT");
     }
     
+    /*
     if(wallArray.get(i).score(shipX, shipY, wallX, wallY, rnum)) {
       ship.scoreTracker();
     }
+    */
 
   }
   // Calling the AI function
