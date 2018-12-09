@@ -31,8 +31,8 @@ class Wall_Obstacle {
   }
 
   // Main function
-  void obstacle(float speed) {  //<>//
-    switch(r){ //<>//
+  void obstacle(float speed) {
+    switch(r){
       case 0:
         leftWall();
         move(speed);
@@ -42,16 +42,16 @@ class Wall_Obstacle {
         move(speed);
         break;
       }
-  }  //<>//
+  }
 
   // This function will determine if the ship has collided with a wall
-  boolean collide(int spaceX, int spaceY, float wallX, float wallY) { //<>//
+  boolean collide(int spaceX, int spaceY, float wallX, float wallY) {
     // wallYRange variable is needed as the wall still extends up by the amount determined by wallH
     float wallYRange = wallY + wallH;
     // Function will first check if the ship and wall are on the same x coordinate.
     if (spaceX == wallX){
        // If the ship is within the wall's y coordinate (along with being within its x coordinate), the ship has indeed collided with the wall and this function will return true.
-       if (spaceY >= wallY && spaceY <= wallYRange) {
+       if ( spaceY  >= wallY && spaceY <= wallYRange) {
          return true;
        }
        else {
@@ -60,6 +60,6 @@ class Wall_Obstacle {
     }
     else {
        return false;
-    } //<>//
+    }
   }
 }
