@@ -62,4 +62,45 @@ class Wall_Obstacle {
        return false;
     }
   }
+  
+  /*
+  // This fuction will create a field opposite to the wall where if the player passes through here, the player will score point(s).
+  // ISSUE: The score increments 2 instead for some reason. Also it's inconsistent at high speeds.
+  boolean score(int spaceX, int spaceY, float wallX, float wallY, int rnum) {
+    if (rnum == 0) {
+      float scoreX = wallX + 150;
+      float scoreY = wallY;
+      float scoreYRange = scoreY + (wallH /2);
+      if (spaceX == scoreX) {
+        if (spaceY >= scoreY && spaceY <= scoreYRange) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+      else {
+        return false;
+      }
+    }
+    else {
+      float scoreX = wallX - 150;
+      float scoreY = wallY;
+      float scoreYRange = scoreY + (wallH /2);
+      
+      if (spaceX == scoreX) {
+        if (spaceY >= scoreY && spaceY <= scoreYRange) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+      else {
+        return false;
+      }
+    }
+  }
+  */
+  
 }
