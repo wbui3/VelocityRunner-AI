@@ -25,19 +25,8 @@ void setup() {
 
 void draw() {
   background(255);
-  // Create the ship the player will control.
-  ship.show();
-  
-  /*
-  // For-loop calls a function that will increment the score
-  // ISSUES: Score increases at an alarming pace, rather than 1 point per obstacle. Warrants investigation
-  for(int i = 0; i < wallArray.size(); i++){
-   if (wallArray.get(i).posY > 700){
-     ship.scoreTracker(i);
-   }
-  }
-  */
-
+  ship.show();          // Create the ship the player will control.
+ 
   // Displays the score
   textSize(15);
   text("current Score: " + ship.score, 10, 15);
@@ -56,21 +45,14 @@ void draw() {
     int shipY = ship.y;
     float wallX = wallArray.get(i).posX;
     float wallY = wallArray.get(i).posY;
-    int rnum = wallArray.get(i).r;
 
     // This if statement will check to see if the ship has collided with a wall.
     if(wallArray.get(i).collide(shipX, shipY, wallX, wallY)){
       noLoop();
       ship.mutate();
-      println("HIT");
+      textSize(40);
+      text("GAME OVER", 50, 400);
     }
-    
-    /*
-    if(wallArray.get(i).score(shipX, shipY, wallX, wallY, rnum)) {
-      ship.scoreTracker();
-    }
-    */
-
   }
   // Calling the AI function
   //ship.dodgingAI();
