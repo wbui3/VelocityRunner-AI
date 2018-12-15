@@ -10,7 +10,7 @@ class Wall_Obstacle {
 
   // Moves the walls down at a certain speed.
   void move(float speed) {
-    float actualSpeed = speed/3;      // originally 10, not 3
+    float actualSpeed = speed/10;      
     posY += actualSpeed;
   }
 
